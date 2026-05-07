@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nexus Leads Group — China Sourcing Agent | Shanghai</title>
+<meta name="description" content="Your trusted sourcing partner in Shanghai, China. We help global entrepreneurs and small businesses source electronics, home goods, and pet products from verified Chinese factories.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #08111f;
+    --navy-mid: #0d1e35;
+    --navy-light: #132843;
+    --gold: #c9922a;
+    --gold-light: #e8b44a;
+    --gold-pale: rgba(201,146,42,0.12);
+    --white: #ffffff;
+    --off-white: #f0ebe3;
+    --muted: rgba(255,255,255,0.55);
+    --border: rgba(255,255,255,0.08);
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.25rem 4rem;
+    background: rgba(8,17,31,0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--white);
+    text-decoration: none;
+  }
+  .logo span { color: var(--gold); }
+
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy);
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: var(--font-display);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 8rem 4rem 5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 70% 40%, rgba(201,146,42,0.08) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 50% at 20% 80%, rgba(201,146,42,0.05) 0%, transparent 60%);
+  }
+
+  .hero-grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 20%, transparent 80%);
+  }
+
+  .hero-content { position: relative; z-index: 1; max-width: 720px; }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--gold-pale);
+    border: 1px solid rgba(201,146,42,0.3);
+    color: var(--gold-light);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    padding: 0.4rem 1rem;
+    border-radius: 2px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+    position: relative;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    color: var(--muted);
+    max-width: 520px;
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 0.9rem 2rem;
+    border-radius: 4px;
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: transparent;
+    color: var(--white);
+    padding: 0.9rem 2rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-outline:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .stat-item {
+    padding: 2rem;
+    border-right: 1px solid var(--border);
+    text-align: center;
+  }
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .stat-label { font-size: 0.8rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+
+  /* ── SECTIONS ── */
+  section { padding: 6rem 4rem; }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .section-sub {
+    font-size: 1rem;
+    color: var(--muted);
+    max-width: 500px;
+    line-height: 1.75;
+    font-weight: 300;
+  }
+
+  /* ── NICHES ── */
+  .niches { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+  .niche-pill {
+    background: var(--navy-light);
+    border: 1px solid var(--border);
+    color: var(--off-white);
+    padding: 0.5rem 1.2rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  .niche-pill:hover { border-color: var(--gold); color: var(--gold-light); }
+
+  /* ── SERVICES ── */
+  .services-section { background: var(--navy-mid); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5px;
+    margin-top: 3rem;
+    border: 1.5px solid var(--border);
+  }
+
+  .service-card {
+    background: var(--navy);
+    padding: 2.5rem 2rem;
+    border: 1px solid var(--border);
+    transition: background 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: left;
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover { background: var(--navy-light); }
+
+  .service-icon {
+    width: 44px; height: 44px;
+    background: var(--gold-pale);
+    border: 1px solid rgba(201,146,42,0.2);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+  }
+
+  .service-card h3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.01em;
+  }
+
+  .service-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; font-weight: 300; }
+
+  /* ── PROCESS ── */
+  .process-list { display: flex; flex-direction: column; gap: 0; margin-top: 3rem; }
+
+  .process-item {
+    display: grid; grid-template-columns: 60px 1fr;
+    gap: 2rem; align-items: start;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .process-item:last-child { border-bottom: none; }
+
+  .process-num {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--gold);
+    opacity: 0.4;
+    line-height: 1;
+  }
+
+  .process-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .process-content p { font-size: 0.9rem; color: var(--muted); font-weight: 300; }
+
+  /* ── PRICING ── */
+  .pricing-section { background: var(--navy-mid); }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+  .price-card {
+    background: var(--navy);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem 1.75rem;
+    transition: transform 0.2s, border-color 0.2s;
+    position: relative;
+  }
+  .price-card:hover { transform: translateY(-4px); border-color: rgba(201,146,42,0.3); }
+  .price-card.featured { border-color: var(--gold); }
+
+  .featured-badge {
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 0.7rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.9rem;
+    border-radius: 100px;
+    white-space: nowrap;
+  }
+
+  .price-name {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  .price-amount {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .price-period { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.25rem; }
+
+  .price-divider { height: 1px; background: var(--border); margin: 1.25rem 0; }
+
+  .price-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.7; font-weight: 300; }
+
+  /* ── CONTACT ── */
+  .contact-section {
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 70% at 50% 100%, rgba(201,146,42,0.07) 0%, transparent 70%);
+  }
+
+  .contact-inner {
+    position: relative; z-index: 1;
+    max-width: 680px;
+  }
+
+  .contact-methods { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; }
+
+  .contact-btn {
+    display: inline-flex; align-items: center; gap: 0.75rem;
+    padding: 0.9rem 1.75rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 1px solid var(--border);
+    color: var(--white);
+    background: var(--navy-light);
+  }
+  .contact-btn:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.2); }
+  .contact-btn.wa { background: #128c4a; border-color: #128c4a; }
+  .contact-btn.wa:hover { background: #1aad5e; border-color: #1aad5e; }
+  .contact-btn .icon { font-size: 1.2rem; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #050d18;
+    border-top: 1px solid var(--border);
+    padding: 2rem 4rem;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+  }
+
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--white);
+  }
+  .footer-logo span { color: var(--gold); }
+
+  footer p { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hero { padding: 7rem 1.5rem 4rem; }
+    section { padding: 4rem 1.5rem; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .stat-item:nth-child(2) { border-right: none; }
+    footer { padding: 1.5rem; flex-direction: column; text-align: center; }
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-badge { animation: fadeUp 0.6s ease both; }
+  .hero h1 { animation: fadeUp 0.6s 0.1s ease both; }
+  .hero p { animation: fadeUp 0.6s 0.2s ease both; }
+  .hero-actions { animation: fadeUp 0.6s 0.3s ease both; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">NEXUS <span>LEADS</span> GROUP</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get a Quote →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🇨🇳 Based in Shanghai, China</div>
+    <h1>Your Sourcing Partner <em>Inside China</em></h1>
+    <p>We help global entrepreneurs and small businesses access China's vast market with confidence — from smart sourcing and supplier connections to tailored e-commerce strategies and market entry support.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Start Sourcing →</a>
+      <a href="#process" class="btn-outline">See How It Works</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <div class="stat-num">500+</div>
+    <div class="stat-label">Factories Visited</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">3</div>
+    <div class="stat-label">Product Categories</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">48h</div>
+    <div class="stat-label">Avg Response Time</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">On-Ground Access</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-tag">Who We Are</div>
+  <h2 class="section-title">Boots on the ground<br>in China's biggest markets</h2>
+  <p class="section-sub">Based in Shanghai with direct factory access across China, we simplify doing business with and in China. Whether you're launching a new product on Amazon, scaling your Shopify store, or looking to invest in China's booming sectors — we provide the tools, insights, and trusted networks to grow faster and smarter.</p>
+  <div class="niches">
+    <span class="niche-pill">📱 Electronics</span>
+    <span class="niche-pill">🏠 Home Goods</span>
+    <span class="niche-pill">🐾 Pet Products</span>
+    <span class="niche-pill">📦 Amazon FBA</span>
+    <span class="niche-pill">🛍️ Shopify Brands</span>
+    <span class="niche-pill">🏭 Yiwu Market</span>
+    <span class="niche-pill">⚡ Shenzhen Electronics</span>
+    <span class="niche-pill">🚢 Canton Fair</span>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services-section">
+  <div class="section-tag">What We Do</div>
+  <h2 class="section-title">End-to-end sourcing<br>from China</h2>
+  <p class="section-sub">From finding the right factory to getting your goods shipped — we handle everything on the ground so you don't have to.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🏭</div>
+      <h3>Factory Finding & Vetting</h3>
+      <p>We visit factories in person across Shanghai, Shenzhen, Yiwu, Guangzhou and Ningbo — only connecting you with verified, reliable suppliers.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">💰</div>
+      <h3>Price Negotiation</h3>
+      <p>On-the-ground negotiation to get you the best price without sacrificing quality. We know what fair prices look like — and we push for them.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔍</div>
+      <h3>Quality Control</h3>
+      <p>On-site inspections and detailed QC reports before your goods leave the factory. No surprises when your shipment arrives.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📦</div>
+      <h3>Sample Coordination</h3>
+      <p>We arrange product samples so you can approve quality before committing to bulk orders — minimizing risk and wasted investment.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🚢</div>
+      <h3>Shipping & Logistics</h3>
+      <p>Full coordination of freight forwarding, customs documentation, and shipping to your door — sea or air freight, your choice.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📊</div>
+      <h3>Market Entry Strategy</h3>
+      <p>Tailored e-commerce and market entry strategies for entrepreneurs launching new products or scaling existing stores in China's booming market.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-tag">How It Works</div>
+  <h2 class="section-title">From inquiry<br>to delivery</h2>
+  <p class="section-sub">A simple, transparent process designed to give you full visibility and control at every step.</p>
+  <div class="process-list">
+    <div class="process-item">
+      <div class="process-num">01</div>
+      <div class="process-content">
+        <h3>Tell Us What You Need</h3>
+        <p>Share your product specs, target price, quantity, and timeline. The more detail the better — we'll take it from there.</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <div class="process-num">02</div>
+      <div class="process-content">
+        <h3>We Find & Vet Suppliers</h3>
+        <p>We visit factories in person, verify credentials, compare quotes, and shortlist only the best options for your review.</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <div class="process-num">03</div>
+      <div class="process-content">
+        <h3>Sample Approval</h3>
+        <p>You receive samples and approve quality before we place any bulk order. Your satisfaction is non-negotiable.</p>
+      </div>
+    </div>
+    <div class="process-item">
+      <div class="process-num">04</div>
+      <div class="process-content">
+        <h3>Quality Control & Shipment</h3>
+        <p>We conduct on-site inspections, prepare your QC report, and coordinate shipping directly to your warehouse or door.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing-section">
+  <div class="section-tag">Pricing</div>
+  <h2 class="section-title">Simple, transparent<br>packages</h2>
+  <p class="section-sub">No hidden fees. No middlemen markups. Pay per project or lock in a monthly partner rate for ongoing sourcing.</p>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-name">Starter</div>
+      <div class="price-amount">$199</div>
+      <div class="price-period">per project</div>
+      <div class="price-divider"></div>
+      <div class="price-desc">3 vetted suppliers with full price quotes delivered within 5 business days. Perfect for first-time importers.</div>
+    </div>
+    <div class="price-card featured">
+      <div class="featured-badge">Most Popular</div>
+      <div class="price-name">Standard</div>
+      <div class="price-amount">$399</div>
+      <div class="price-period">per project</div>
+      <div class="price-divider"></div>
+      <div class="price-desc">Supplier finding + price negotiation + sample arrangement. Best value for Amazon FBA and Shopify sellers.</div>
+    </div>
+    <div class="price-card">
+      <div class="price-name">Full Service</div>
+      <div class="price-amount">$699</div>
+      <div class="price-period">per project</div>
+      <div class="price-divider"></div>
+      <div class="price-desc">Everything in Standard + in-person factory visit + full QC report. End-to-end sourcing handled completely.</div>
+    </div>
+    <div class="price-card">
+      <div class="price-name">Retainer</div>
+      <div class="price-amount">$1,200</div>
+      <div class="price-period">per month</div>
+      <div class="price-divider"></div>
+      <div class="price-desc">Your dedicated sourcing partner in China. Priority access, unlimited sourcing requests, and monthly strategy calls.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="contact-inner">
+    <div class="section-tag">Get In Touch</div>
+    <h2 class="section-title">Ready to source<br>from China?</h2>
+    <p class="section-sub">First consultation is completely free. Reach out on any platform — we typically respond within a few hours during Shanghai business hours.</p>
+    <div class="contact-methods">
+      <a href="https://wa.me/8615221746320" class="contact-btn wa" target="_blank">
+        <span class="icon">💬</span> WhatsApp Us
+      </a>
+      <a href="https://wa.me/8615221746320" class="contact-btn" target="_blank">
+        <span class="icon">💚</span> WeChat: +86 152-2174-6320
+      </a>
+      <a href="mailto:nexusleadsagroup@outlook.com" class="contact-btn">
+        <span class="icon">✉️</span> nexusleadsagroup@outlook.com
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">NEXUS <span>LEADS</span> GROUP</div>
+  <p>Shanghai, China &nbsp;·&nbsp; Electronics · Home Goods · Pet Products</p>
+  <p>© 2026 Shanghai Chengyi Communication & Planning Co., Ltd.</p>
+</footer>
+
+</body>
+</html>
